@@ -1,0 +1,35 @@
+<div class="view-transactions-container">
+  <h2>Your Transactions</h2>
+
+  <table class="transactions-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Amount</th>
+        <th>Type</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.title }}</td>
+        <td>{{ transaction.amount | currency }}</td>
+        <td>{{ transaction.type }}</td>
+        <td>{{ transaction.date }}</td>
+        <td>
+          <button class="action-btn edit" (click)="editTransaction(transaction)">
+            ✏️
+          </button>
+          <button class="action-btn delete" (click)="deleteTransaction(transaction)">
+            🗑️
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="transactions.length === 0" class="no-transactions">
+    No transactions found.
+  </p>
+</div>

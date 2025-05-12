@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Ensure full page height is usable */
+html, body {
+  height: 100%;
+}
+
+/* Top Navbar */
+.dashboard-navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.nav-links li a.active {
+  color: #007bff;
+}
+
+/* Dashboard background and layout */
+.dashboard-content {
+  background-image: url('/assets/images/finance-tracker-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+.dashboard-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* dark overlay for better contrast */
+  z-index: 0;
+}
+
+/* Welcome section styling */
+.welcome-section {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(5px); /* subtle glass effect */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  max-width: 700px;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+.intro-message {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #f1f1f1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+/* Call to Action */
+.cta p {
+  margin-bottom: 0.5rem;
+  color: #f8f9fa;
+  font-weight: 500;
+}
+
+.cta .btn {
+  background-color: #00bfa6;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta .btn:hover {
+  background-color: #009e86;
+  color: white;
+}

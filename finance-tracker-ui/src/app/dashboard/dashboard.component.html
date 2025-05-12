@@ -1,0 +1,27 @@
+<!-- Top Navbar -->
+<nav class="dashboard-navbar">
+  <div class="logo">💰 Finance Tracker</div>
+  <ul class="nav-links">
+    <li><a routerLink="/dashboard" routerLinkActive="active">Overview</a></li>
+    <li><a routerLink="/add-transaction" routerLinkActive="active">Add Transaction</a></li>
+    <li><a routerLink="/view-transactions" routerLinkActive="active">View Transactions</a></li>
+    <li><a routerLink="/reports" routerLinkActive="active">Reports</a></li>
+    <li><a routerLink="/logout" routerLinkActive="active">Logout</a></li>
+  </ul>
+</nav>
+
+<!-- Dashboard Body with Background Image -->
+<div class="dashboard-content">
+  <div class="welcome-section">
+    <h1>Welcome to Your Personal Finance Tracker</h1>
+    <p class="intro-message">
+      Keep track of your finances effortlessly. From managing transactions to generating insightful reports, this app helps you stay on top of your financial health.
+    </p>
+
+    <div class="cta">
+      <p>Start by adding a transaction to track your spending or view your financial overview!</p>
+      <button class="btn btn-primary" (click)="addTransaction()">Add Transaction</button>
+
+    </div>
+  </div>
+</div>

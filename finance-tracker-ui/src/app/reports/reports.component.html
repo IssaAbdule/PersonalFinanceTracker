@@ -1,0 +1,32 @@
+<div class="report-container">
+  <h2>Financial Report</h2>
+
+  <div class="report-cards">
+    <div class="report-card income">
+      <h3>Total Income</h3>
+      <p>{{ totalIncome | currency }}</p>
+    </div>
+
+    <div class="report-card expense">
+      <h3>Total Expenses</h3>
+      <p>{{ totalExpenses | currency }}</p>
+    </div>
+
+    <div class="report-card balance">
+      <h3>Balance</h3>
+      <p>{{ balance | currency }}</p>
+    </div>
+  </div>
+
+  <div *ngIf="transactions.length > 0" class="transactions-breakdown">
+    <h4>Transaction Breakdown</h4>
+    <ul>
+      <li *ngFor="let t of transactions">
+        <span>{{ t.date }} - {{ t.title }} ({{ t.type }}):</span>
+        <strong>{{ t.amount | currency }}</strong>
+      </li>
+    </ul>
+  </div>
+
+  <p *ngIf="transactions.length === 0" class="no-transactions">No transactions to display.</p>
+</div>

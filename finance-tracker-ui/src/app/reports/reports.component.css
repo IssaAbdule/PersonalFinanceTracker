@@ -1,0 +1,71 @@
+.report-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.report-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.report-card {
+  flex: 1;
+  min-width: 250px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.report-card.income {
+  background-color: #28a745;
+}
+
+.report-card.expense {
+  background-color: #dc3545;
+}
+
+.report-card.balance {
+  background-color: #007bff;
+}
+
+.transactions-breakdown {
+  margin-top: 2rem;
+}
+
+.transactions-breakdown h4 {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.transactions-breakdown ul {
+  list-style: none;
+  padding: 0;
+}
+
+.transactions-breakdown li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+}
+
+.no-transactions {
+  text-align: center;
+  margin-top: 2rem;
+  color: #777;
+}
